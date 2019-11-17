@@ -7,8 +7,8 @@ class RLT(MDSP):
 
     def __init__(self, d: list):
         super().__init__(d)
-        self.x = []
-        self.y = []
+        self.x = dict()
+        self.y = dict()
 
         self.add_variables()
         self.set_objective()
@@ -25,21 +25,18 @@ class RLT(MDSP):
         print('Obj: %s' % self.model.ObjVal)
 
     def add_variables(self):
-        for i in range(self.B+1):
-            self.x.append(self.model.addVar(name=f'x{i}', vtype=GRB.BINARY))
+        for p in self.P:
+            self.x[p] = self.model.addVar(name=f'x{p}', vtype=GRB.BINARY)
 
-        for i in range(self.B+1):
-            temp = []
+        for i, index_i in zip(self.P, range(self.n)):
+            self.y[i] = dict()
 
-            for j in range(i+1):
-                temp.append(None)
-            for j in range(i+1, self.B+1):
-                temp.append(self.model.addVar(name=f'y{i},{j}', vtype=GRB.INTEGER))
-
-            self.y.append(temp)
+            for j, index_j in zip(self.P, range(self.n)):
+                if index_i < index_j:
+                    self.y[i][j] = self.model.addVar(name=f'y{i},{j}', vtype=GRB.INTEGER)
 
     def set_objective(self):
-        self.model.setObjective(quicksum(self.x[i] for i in range(self.B+1)), GRB.MINIMIZE)
+        self.model.setObjective(quicksum(self.x[p] for p in self.P), GRB.MINIMIZE)
 
     def add_constraints(self):
         self.add_constraint_8()
@@ -47,11 +44,12 @@ class RLT(MDSP):
 
     def add_constraint_8(self):
         for d, index in zip(self.D_, range(len(self.D_))):
-            self.model.addConstr(quicksum(self.y[i][i+d] for i in range(self.B-d+1)) >= self.M[index])
+            self.model.addConstr(quicksum(self.y[p][p+d] for p in self.P if p <= (self.B-d)) >= self.M[index])
 
     def add_constraints_9_10_11(self):
-        for i in range(self.B+1):
-            for j in range(i+1, self.B+1):
-                self.model.addConstr(self.y[i][j] - self.x[i] - self.x[j] >= -1)
-                self.model.addConstr(self.y[i][j] - self.x[i] <= 0)
-                self.model.addConstr(self.y[i][j] - self.x[j] <= 0)
+        for i, index_i in zip(self.P, range(len(self.P))):
+            for j, index_j in zip(self.P, range(len(self.P))):
+                if index_i < index_j:
+                    self.model.addConstr(self.y[i][j] - self.x[i] - self.x[j] >= -1)
+                    self.model.addConstr(self.y[i][j] - self.x[i] <= 0)
+                    self.model.addConstr(self.y[i][j] - self.x[j] <= 0)
