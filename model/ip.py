@@ -26,7 +26,7 @@ class IP(MDSP):
         print('Obj: %s' % self.model.ObjVal)
 
     def add_variables(self):
-        for i in range(self.k + 1):
+        for i in range(self.k):
             self.x[i] = dict()
 
             for j in range(i + 1, self.k + 1):
@@ -51,16 +51,16 @@ class IP(MDSP):
         self.add_constraint_27()
 
     def add_constraint_22(self):
-        for i in range(self.k + 1):
+        for i in range(self.k):
             for j in range(i + 1, self.k + 1):
                 self.model.addConstr(quicksum(self.x[i][j][d] for d in self.D_) <= self.z[j])
 
     def add_constraint_23(self):
         for d, index in zip(self.D_, range(len(self.D_))):
-            self.model.addConstr(quicksum(self.x[i][j][d] for i in range(self.k + 1) for j in range(i + 1, self.k + 1)) == self.M[index])
+            self.model.addConstr(quicksum(self.x[i][j][d] for i in range(self.k) for j in range(i + 1, self.k + 1)) == self.M[index])
 
     def add_constraint_24_25_26(self):
-        for i in range(self.k + 1):
+        for i in range(self.k):
             for j in range(i + 1, self.k + 1):
                 self.model.addConstr(self.p[i] + 1 <= self.p[j])
 
