@@ -5,6 +5,8 @@ from model.ip import IP
 from model.feas import FEAS
 from model.max import MAX
 
+from generator import generator
+
 
 def test():
     d = [1, 1, 1, 3, 9, 12]
@@ -17,4 +19,8 @@ def test():
 
 
 if __name__ == '__main__':
-    test()
+    # test()
+    generator.generate_full(6, 30)
+    generator.generate_miss(6, 30)
+    generator.generate_joint(6, 15, 5, 15)
+    generator.generate_drand(10, 110)
