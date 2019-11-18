@@ -6,6 +6,7 @@ from model.feas import FEAS
 from model.max import MAX
 
 from generator import generator
+from generator.instances import Instances
 
 
 def test():
@@ -24,3 +25,9 @@ if __name__ == '__main__':
     generator.generate_miss(6, 30)
     generator.generate_joint(6, 15, 5, 15)
     generator.generate_drand(10, 110)
+
+    inst = Instances()
+    inst.generate_full_instances()
+    inst.generate_miss_instances()
+    inst.generate_joint_instances()
+    inst.generate_drand_instances()
