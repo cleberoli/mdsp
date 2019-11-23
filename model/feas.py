@@ -5,8 +5,8 @@ from model.mdsp import MDSP
 
 class FEAS(MDSP):
 
-    def __init__(self, d: list, t: int):
-        super().__init__(d)
+    def __init__(self, d: list, t: int, filename: str):
+        super().__init__(d, filename)
         self.t = t
         self.x = dict()
         self.p = dict()
@@ -14,17 +14,6 @@ class FEAS(MDSP):
         self.add_variables()
         self.set_objective()
         self.add_constraints()
-
-        self.model.update()
-        self.model.optimize()
-
-        self.model.write('feas.lp')
-
-        if self.model.status == 3:
-            print('Infeasible')
-        else:
-            self.model.write('feas.sol')
-            print('Obj: %s' % self.model.ObjVal)
 
     def add_variables(self):
         for i in range(self.t):
@@ -48,8 +37,8 @@ class FEAS(MDSP):
         self.add_constraint_33_34_35()
 
     def add_constraint_31(self):
-        for d, index in zip(self.D_, range(len(self.D_))):
-            self.model.addConstr(quicksum(self.x[i][j][d] for i in range(self.t) for j in range(i + 1, self.t + 1)) == self.M[index])
+        for d in self.D_:
+            self.model.addConstr(quicksum(self.x[i][j][d] for i in range(self.t) for j in range(i + 1, self.t + 1)) == self.M[d])
 
     def add_constraint_32(self):
         for i in range(self.t):

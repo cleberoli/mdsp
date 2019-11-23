@@ -5,8 +5,8 @@ from model.mdsp import MDSP
 
 class IP(MDSP):
 
-    def __init__(self, d: list):
-        super().__init__(d)
+    def __init__(self, d: list, filename: str):
+        super().__init__(d, filename)
         self.z = dict()
         self.x = dict()
         self.p = dict()
@@ -14,16 +14,6 @@ class IP(MDSP):
         self.add_variables()
         self.set_objective()
         self.add_constraints()
-
-        self.model.update()
-        self.model.optimize()
-
-        self.model.write('ip.lp')
-        self.model.write('ip.sol')
-
-        for v in self.model.getVars():
-            print('%s %s' % (v.VarName, v.X))
-        print('Obj: %s' % self.model.ObjVal)
 
     def add_variables(self):
         for i in range(self.k):
@@ -56,8 +46,8 @@ class IP(MDSP):
                 self.model.addConstr(quicksum(self.x[i][j][d] for d in self.D_) <= self.z[j])
 
     def add_constraint_23(self):
-        for d, index in zip(self.D_, range(len(self.D_))):
-            self.model.addConstr(quicksum(self.x[i][j][d] for i in range(self.k) for j in range(i + 1, self.k + 1)) == self.M[index])
+        for d in self.D_:
+            self.model.addConstr(quicksum(self.x[i][j][d] for i in range(self.k) for j in range(i + 1, self.k + 1)) == self.M[d])
 
     def add_constraint_24_25_26(self):
         for i in range(self.k):
