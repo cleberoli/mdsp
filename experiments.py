@@ -5,7 +5,7 @@ from experiments.solver import Solver
 
 
 PATH = 'logs'
-TYPES = ['full', 'miss', 'joint', 'drand']
+TYPES = ['full', 'miss', 'drand']
 MODELS = ['qp', 'rlt', 'ip', 'feas', 'max']
 
 
@@ -67,14 +67,14 @@ def run_experiments(t: str, m: str):
 
 
 if __name__ == '__main__':
-    generate_instances()
-    create_log_directories()
+    # generate_instances()
+    # create_log_directories()
 
-    # for t in TYPES:
-    #     run_experiments(t, 'max')
-    #
-    # for t in TYPES:
-    #     run_experiments(t, 'feas')
-    #
-    # for t in TYPES:
-    #     run_experiments(t, 'ip')
+    for t in TYPES:
+        run_experiments(t, 'max')
+
+    for t in TYPES:
+        run_experiments(t, 'feas')
+
+    for t in TYPES:
+        run_experiments(t, 'ip')

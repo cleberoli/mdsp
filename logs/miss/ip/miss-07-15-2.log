@@ -1,0 +1,78 @@
+
+Gurobi 8.1.1 (win64) logging started 11/24/19 13:12:18
+
+Changed value of parameter LogFile to logs/miss/ip/miss-07-15-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 2756 rows, 1290 columns and 10423 nonzeros
+Variable types: 0 continuous, 1290 integer (1275 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Presolve removed 3 rows and 3 columns
+Presolve time: 0.04s
+Presolved: 2753 rows, 1287 columns, 10414 nonzeros
+Variable types: 0 continuous, 1287 integer (1272 binary)
+
+Root relaxation: objective 4.294118e+00, 669 iterations, 0.04 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    4.29412    0  134          -    4.29412      -     -    0s
+H    0     0                      15.0000000    4.29412  71.4%     -    0s
+H    0     0                      12.0000000    4.29412  64.2%     -    0s
+     0     0    6.00000    0   13   12.00000    6.00000  50.0%     -    0s
+     0     0    6.00000    0   19   12.00000    6.00000  50.0%     -    0s
+H    0     0                      11.0000000    6.00000  45.5%     -    0s
+     0     0    6.00000    0   47   11.00000    6.00000  45.5%     -    0s
+     0     0    6.00000    0   12   11.00000    6.00000  45.5%     -    0s
+     0     0    6.00000    0   35   11.00000    6.00000  45.5%     -    0s
+     0     0    6.00000    0   35   11.00000    6.00000  45.5%     -    0s
+     0     0    6.00000    0   11   11.00000    6.00000  45.5%     -    0s
+     0     0    6.00000    0   13   11.00000    6.00000  45.5%     -    0s
+     0     0    6.00000    0   14   11.00000    6.00000  45.5%     -    0s
+H    0     0                      10.0000000    6.00000  40.0%     -    0s
+     0     0    6.00000    0   46   10.00000    6.00000  40.0%     -    0s
+     0     0    6.00000    0   10   10.00000    6.00000  40.0%     -    0s
+     0     0    6.00000    0   12   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   41   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   10   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   51   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   28   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   34   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   11   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   11   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   15   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   12   10.00000    6.00000  40.0%     -    1s
+     0     0    6.00000    0   12   10.00000    6.00000  40.0%     -    1s
+     0     2    6.00000    0   12   10.00000    6.00000  40.0%     -    1s
+H  740   381                       9.0000000    6.00000  33.3%  13.3    2s
+H  759   376                       8.0000000    6.00000  25.0%  21.3    3s
+  4076  1854    7.00000  100   31    8.00000    6.00000  25.0%  16.8    5s
+H 8593   899                       7.0000000    6.00000  14.3%  12.7    5s
+ 23577   556 infeasible  112         7.00000    6.00000  14.3%  10.7   11s
+ 39666  1476    6.00000   78   33    7.00000    6.00000  14.3%  10.7   15s
+ 57608  2701    6.00000  123   12    7.00000    6.00000  14.3%  11.4   20s
+ 73671  3612 infeasible  107         7.00000    6.00000  14.3%  11.8   25s
+ 80997  2364    6.00000  106   21    7.00000    6.00000  14.3%  11.9   30s
+ 101832   259 infeasible   99         7.00000    6.00000  14.3%  12.3   35s
+ 136960   101 infeasible   88         7.00000    6.00000  14.3%  12.3   40s
+ 170114    79    6.00000  118   31    7.00000    6.00000  14.3%  12.3   45s
+ 204707    40    6.00000  100   22    7.00000    6.00000  14.3%  12.4   50s
+
+Cutting planes:
+  Inf proof: 19
+
+Explored 217185 nodes (2711214 simplex iterations) in 52.06 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 7: 7 8 9 ... 15
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.000000000000e+00, best bound 7.000000000000e+00, gap 0.0000%

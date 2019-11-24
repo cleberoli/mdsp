@@ -1,0 +1,79 @@
+
+Gurobi 8.1.1 (win64) logging started 11/23/19 13:24:27
+
+Changed value of parameter LogFile to logs/miss/max/miss-05-15-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 154 rows, 66 columns and 510 nonzeros
+Variable types: 0 continuous, 66 integer (60 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 9e+01]
+Found heuristic solution: objective 1.0000000
+Presolve time: 0.00s
+Presolved: 154 rows, 66 columns, 510 nonzeros
+Variable types: 0 continuous, 66 integer (60 binary)
+
+Root relaxation: objective 5.000000e+00, 26 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    5.00000    0    4    1.00000    5.00000   400%     -    0s
+H    0     0                       4.0000000    5.00000  25.0%     -    0s
+     0     0    5.00000    0   10    4.00000    5.00000  25.0%     -    0s
+H    0     0                       5.0000000    5.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 1
+
+Explored 1 nodes (82 simplex iterations) in 0.01 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 3: 5 4 1 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+00, best bound 5.000000000000e+00, gap 0.0000%
+
+Gurobi 8.1.1 (win64) logging started 11/23/19 13:24:27
+
+Changed value of parameter LogFile to logs/miss/max/miss-05-15-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 104 rows, 45 columns and 340 nonzeros
+Variable types: 0 continuous, 45 integer (40 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 9e+01]
+Found heuristic solution: objective 1.0000000
+Presolve time: 0.00s
+Presolved: 104 rows, 45 columns, 340 nonzeros
+Variable types: 0 continuous, 45 integer (40 binary)
+
+Root relaxation: objective 5.000000e+00, 17 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    5.00000    0    2    1.00000    5.00000   400%     -    0s
+H    0     0                       4.0000000    5.00000  25.0%     -    0s
+H    0     0                       5.0000000    5.00000  0.00%     -    0s
+
+Explored 1 nodes (78 simplex iterations) in 0.01 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 3: 5 4 1 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+00, best bound 5.000000000000e+00, gap 0.0000%

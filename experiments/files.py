@@ -38,6 +38,11 @@ def restore_solution(filename: str):
     if os.path.exists(f'{filename}.time'):
         os.remove(f'{filename}.time')
 
-    os.rename(f'{filename}.lp.bak', f'{filename}.lp')
-    os.rename(f'{filename}.sol.bak', f'{filename}.sol')
-    os.rename(f'{filename}.time.bak', f'{filename}.time')
+    if os.path.exists(f'{filename}.lp.bak'):
+        os.rename(f'{filename}.lp.bak', f'{filename}.lp')
+
+    if os.path.exists(f'{filename}.sol.bak'):
+        os.rename(f'{filename}.sol.bak', f'{filename}.sol')
+
+    if os.path.exists(f'{filename}.time.bak'):
+        os.rename(f'{filename}.time.bak', f'{filename}.time')

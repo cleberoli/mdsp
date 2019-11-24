@@ -37,12 +37,15 @@ class Solver:
             mid = floor((lb + ub) / 2)
             FEAS(self.d, mid, self.filename).solve()
 
-            if self.is_feasible_feas():
-                files.save_solution(self.filename)
-                ub = mid
+            if self.timeout():
+                lb = ub
             else:
-                files.update_time(self.filename)
-                lb = mid + 1
+                if self.is_feasible_feas():
+                    files.save_solution(self.filename)
+                    ub = mid
+                else:
+                    files.update_time(self.filename)
+                    lb = mid + 1
 
         files.restore_solution(self.filename)
 
@@ -51,6 +54,12 @@ class Solver:
             status = int(file.readline())
             file.close()
             return status == 2
+
+    def timeout(self):
+        with open(f'{self.filename}.time', 'r') as file:
+            status = int(file.readline())
+            file.close()
+            return status == 9
 
     def binary_search_max(self):
         k = len(self.d)

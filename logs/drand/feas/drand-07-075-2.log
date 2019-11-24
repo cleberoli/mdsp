@@ -1,0 +1,107 @@
+
+Gurobi 8.1.1 (win64) logging started 11/24/19 12:28:43
+
+Changed value of parameter LogFile to logs/drand/feas/drand-07-075-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 343 rows, 154 columns and 1218 nonzeros
+Variable types: 0 continuous, 154 integer (147 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Presolve time: 0.00s
+Presolved: 343 rows, 154 columns, 1218 nonzeros
+Variable types: 0 continuous, 154 integer (147 binary)
+
+Root relaxation: objective 2.216667e+01, 110 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   22.16667    0   81          -   22.16667      -     -    0s
+     0     0   31.64488    0   48          -   31.64488      -     -    0s
+     0     0   31.78454    0   47          -   31.78454      -     -    0s
+     0     0   35.03241    0   43          -   35.03241      -     -    0s
+     0     0   35.22474    0   41          -   35.22474      -     -    0s
+     0     0   35.22474    0   44          -   35.22474      -     -    0s
+     0     0   35.24724    0   45          -   35.24724      -     -    0s
+     0     0   35.24724    0   46          -   35.24724      -     -    0s
+     0     0   35.28012    0   48          -   35.28012      -     -    0s
+     0     0   35.28012    0   41          -   35.28012      -     -    0s
+H    0     0                     158.0000000   35.28012  77.7%     -    0s
+H    0     0                     150.0000000   35.28012  76.5%     -    0s
+     0     2   35.28012    0   41  150.00000   35.28012  76.5%     -    0s
+H  338   185                     149.0000000   78.00000  47.7%   8.0    0s
+*  378   190              53     142.0000000   79.00000  44.4%   7.5    0s
+H 1476   563                     117.0000000   96.00000  17.9%   6.9    0s
+
+Explored 1528 nodes (12114 simplex iterations) in 0.45 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 5: 117 142 149 ... 158
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.170000000000e+02, best bound 1.170000000000e+02, gap 0.0000%
+
+Gurobi 8.1.1 (win64) logging started 11/24/19 12:28:44
+
+Changed value of parameter LogFile to logs/drand/feas/drand-07-075-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 247 rows, 111 columns and 870 nonzeros
+Variable types: 0 continuous, 111 integer (105 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Presolve time: 0.01s
+Presolved: 247 rows, 111 columns, 870 nonzeros
+Variable types: 0 continuous, 111 integer (105 binary)
+
+Root relaxation: objective 2.060000e+01, 100 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   20.60000    0   67          -   20.60000      -     -    0s
+     0     0   30.80858    0   47          -   30.80858      -     -    0s
+     0     0   30.96587    0   45          -   30.96587      -     -    0s
+     0     0   37.03555    0   53          -   37.03555      -     -    0s
+     0     0   37.04060    0   55          -   37.04060      -     -    0s
+     0     0   38.80503    0   42          -   38.80503      -     -    0s
+H    0     0                     165.0000000   38.80503  76.5%     -    0s
+H    0     0                     159.0000000   38.80503  75.6%     -    0s
+     0     0   39.13754    0   50  159.00000   39.13754  75.4%     -    0s
+     0     0   39.14110    0   53  159.00000   39.14110  75.4%     -    0s
+     0     0   39.17645    0   53  159.00000   39.17645  75.4%     -    0s
+     0     0   39.19137    0   52  159.00000   39.19137  75.4%     -    0s
+     0     0   39.19137    0   54  159.00000   39.19137  75.4%     -    0s
+     0     0   39.19137    0   54  159.00000   39.19137  75.4%     -    0s
+     0     0   39.19137    0   40  159.00000   39.19137  75.4%     -    0s
+     0     2   39.19137    0   38  159.00000   39.19137  75.4%     -    0s
+H   29    21                     148.0000000   44.47948  69.9%  11.8    0s
+* 1556   163              49     129.0000000  107.48000  16.7%   7.9    0s
+
+Cutting planes:
+  Gomory: 49
+  Implied bound: 4
+  MIR: 39
+  StrongCG: 1
+  Inf proof: 3
+
+Explored 1796 nodes (14166 simplex iterations) in 0.37 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 4: 129 148 159 165 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.290000000000e+02, best bound 1.290000000000e+02, gap 0.0000%

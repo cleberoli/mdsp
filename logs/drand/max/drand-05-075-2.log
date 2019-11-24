@@ -1,0 +1,72 @@
+
+Gurobi 8.1.1 (win64) logging started 11/23/19 15:26:54
+
+Changed value of parameter LogFile to logs/drand/max/drand-05-075-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 185 rows, 81 columns and 630 nonzeros
+Variable types: 0 continuous, 81 integer (75 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 185 rows, 81 columns, 630 nonzeros
+Variable types: 0 continuous, 81 integer (75 binary)
+
+Root relaxation: objective 5.000000e+00, 44 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                       5.0000000   75.00000  1400%     -    0s
+     0     0          -    0         5.00000    5.00000  0.00%     -    0s
+
+Explored 0 nodes (126 simplex iterations) in 0.01 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 5 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+00, best bound 5.000000000000e+00, gap 0.0000%
+
+Gurobi 8.1.1 (win64) logging started 11/23/19 15:26:54
+
+Changed value of parameter LogFile to logs/drand/max/drand-05-075-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 125 rows, 55 columns and 420 nonzeros
+Variable types: 0 continuous, 55 integer (50 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Found heuristic solution: objective -0.0000000
+Presolve time: 0.00s
+Presolved: 125 rows, 55 columns, 420 nonzeros
+Variable types: 0 continuous, 55 integer (50 binary)
+
+Root relaxation: objective 5.000000e+00, 32 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                       5.0000000   50.00000   900%     -    0s
+     0     0          -    0         5.00000    5.00000  0.00%     -    0s
+
+Explored 0 nodes (97 simplex iterations) in 0.01 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 2: 5 -0 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+00, best bound 5.000000000000e+00, gap 0.0000%

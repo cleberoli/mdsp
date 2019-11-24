@@ -1,0 +1,59 @@
+
+Gurobi 8.1.1 (win64) logging started 11/24/19 13:07:32
+
+Changed value of parameter LogFile to logs/full/ip/full-07-30-0.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 10206 rows, 4895 columns and 39543 nonzeros
+Variable types: 0 continuous, 4895 integer (4873 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+02]
+Presolve removed 3 rows and 3 columns
+Presolve time: 0.29s
+Presolved: 10203 rows, 4892 columns, 39534 nonzeros
+Variable types: 0 continuous, 4892 integer (4870 binary)
+
+Root relaxation: objective 4.500000e+00, 1479 iterations, 0.13 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    4.50000    0  278          -    4.50000      -     -    1s
+H    0     0                      22.0000000    4.50000  79.5%     -    1s
+H    0     0                      14.0000000    4.50000  67.9%     -    1s
+     0     0    7.00000    0   40   14.00000    7.00000  50.0%     -    2s
+     0     0    7.00000    0   27   14.00000    7.00000  50.0%     -    2s
+     0     0    7.00000    0   92   14.00000    7.00000  50.0%     -    2s
+     0     0    7.00000    0   38   14.00000    7.00000  50.0%     -    2s
+     0     0    7.00000    0   38   14.00000    7.00000  50.0%     -    2s
+     0     0    7.00000    0   45   14.00000    7.00000  50.0%     -    3s
+     0     0    7.00000    0   44   14.00000    7.00000  50.0%     -    3s
+     0     0    7.00000    0   34   14.00000    7.00000  50.0%     -    3s
+     0     0    7.00000    0   28   14.00000    7.00000  50.0%     -    3s
+     0     0    7.00000    0   19   14.00000    7.00000  50.0%     -    3s
+     0     2    7.00000    0   19   14.00000    7.00000  50.0%     -    3s
+    94    63    7.00000   48   55   14.00000    7.00000  50.0%  73.8    5s
+  1512  1149    8.00000  243   40   14.00000    7.00000  50.0%  41.0   11s
+H 1524  1098                      13.0000000    7.00000  46.2%  40.7   13s
+  1532  1103    7.00000  101   28   13.00000    7.00000  46.2%  40.5   15s
+H 1534  1050                      12.0000000    7.00000  41.7%  52.4   15s
+H 1551  1008                       7.0000000    7.00000  0.00%  51.8   18s
+
+Cutting planes:
+  Gomory: 5
+  MIR: 3
+  Flow cover: 13
+
+Explored 1551 nodes (109217 simplex iterations) in 18.61 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 5: 7 12 13 ... 22
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.000000000000e+00, best bound 7.000000000000e+00, gap 0.0000%

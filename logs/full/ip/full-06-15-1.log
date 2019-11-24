@@ -1,0 +1,44 @@
+
+Gurobi 8.1.1 (win64) logging started 11/24/19 12:59:55
+
+Changed value of parameter LogFile to logs/full/ip/full-06-15-1.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 3388 rows, 1592 columns and 12870 nonzeros
+Variable types: 0 continuous, 1592 integer (1576 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Presolve removed 3 rows and 3 columns
+Presolve time: 0.04s
+Presolved: 3385 rows, 1589 columns, 12861 nonzeros
+Variable types: 0 continuous, 1589 integer (1573 binary)
+
+Root relaxation: objective 4.333333e+00, 733 iterations, 0.04 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    4.33333    0  152          -    4.33333      -     -    0s
+     0     0    6.00000    0   44          -    6.00000      -     -    0s
+     0     0    6.00000    0   45          -    6.00000      -     -    0s
+H    0     0                       6.0000000    6.00000  0.00%     -    0s
+     0     0    6.00000    0   43    6.00000    6.00000  0.00%     -    0s
+
+Cutting planes:
+  Clique: 21
+  MIR: 13
+  Zero half: 4
+
+Explored 1 nodes (2517 simplex iterations) in 0.50 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 1: 6 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.000000000000e+00, best bound 6.000000000000e+00, gap 0.0000%
