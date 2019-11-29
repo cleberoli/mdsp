@@ -1,0 +1,55 @@
+
+Gurobi 8.1.1 (win64) logging started 11/26/19 22:03:31
+
+Changed value of parameter LogFile to logs/miss/rlt/miss-05-15-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 6637 rows, 2278 columns and 15698 nonzeros
+Variable types: 0 continuous, 2278 integer (67 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective 5.0000000
+Presolve time: 0.04s
+Presolved: 6637 rows, 2278 columns, 15698 nonzeros
+Variable types: 0 continuous, 2278 integer (2278 binary)
+
+Root relaxation: objective 2.679487e+00, 503 iterations, 0.04 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    2.67949    0   72    5.00000    2.67949  46.4%     -    0s
+     0     0    3.00000    0   56    5.00000    3.00000  40.0%     -    0s
+     0     0    3.00000    0   56    5.00000    3.00000  40.0%     -    0s
+     0     0    3.00000    0  270    5.00000    3.00000  40.0%     -    0s
+     0     0    3.00000    0  259    5.00000    3.00000  40.0%     -    1s
+     0     0    3.00000    0   24    5.00000    3.00000  40.0%     -    1s
+     0     0    3.00000    0   43    5.00000    3.00000  40.0%     -    1s
+     0     0    3.00000    0   56    5.00000    3.00000  40.0%     -    2s
+     0     0    3.00000    0   57    5.00000    3.00000  40.0%     -    2s
+     0     0    3.00000    0   80    5.00000    3.00000  40.0%     -    2s
+     0     0    3.00000    0  159    5.00000    3.00000  40.0%     -    2s
+     0     0    3.00000    0   91    5.00000    3.00000  40.0%     -    2s
+     0     0    3.00000    0   96    5.00000    3.00000  40.0%     -    2s
+     0     0    3.00000    0   83    5.00000    3.00000  40.0%     -    2s
+     0     0    3.00000    0   83    5.00000    3.00000  40.0%     -    2s
+     0     2    3.00000    0   83    5.00000    3.00000  40.0%     -    5s
+
+Cutting planes:
+  Gomory: 2
+  MIR: 4
+  Zero half: 27
+
+Explored 418 nodes (24003 simplex iterations) in 7.70 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 1: 5 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+00, best bound 5.000000000000e+00, gap 0.0000%

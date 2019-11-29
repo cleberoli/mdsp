@@ -1,0 +1,45 @@
+
+Gurobi 8.1.1 (win64) logging started 11/26/19 08:55:54
+
+Changed value of parameter LogFile to logs/miss/qp/miss-05-15-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 1 rows, 67 columns and 1 nonzeros
+Model has 4 quadratic constraints
+Variable types: 0 continuous, 67 integer (67 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  QMatrix range    [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  QRHS range       [1e+00, 2e+00]
+Found heuristic solution: objective 67.0000000
+Presolve removed 1 rows and 1 columns
+Presolve time: 0.05s
+Presolved: 0 rows, 66 columns, 0 nonzeros
+Variable types: 0 continuous, 66 integer (66 binary)
+
+Root relaxation: objective 1.000000e+00, 0 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    2.50000    0    1   67.00000    2.50000  96.3%     -    0s
+H    0     0                       6.0000000    2.50000  58.3%     -    0s
+     0     0    3.00000    0    4    6.00000    3.00000  50.0%     -    0s
+     0     0    3.00000    0    4    6.00000    3.00000  50.0%     -    0s
+H    0     0                       5.0000000    3.00000  40.0%     -    0s
+     0     2    3.00000    0    4    5.00000    3.00000  40.0%     -    0s
+
+Explored 1529 nodes (3736 simplex iterations) in 3.23 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 3: 5 6 67 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+00, best bound 5.000000000000e+00, gap 0.0000%
+Warning: Q constraint 0 doesn't have a name

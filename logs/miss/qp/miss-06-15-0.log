@@ -1,0 +1,50 @@
+
+Gurobi 8.1.1 (win64) logging started 11/26/19 09:58:15
+
+Changed value of parameter LogFile to logs/miss/qp/miss-06-15-0.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 1 rows, 106 columns and 1 nonzeros
+Model has 6 quadratic constraints
+Variable types: 0 continuous, 106 integer (106 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  QMatrix range    [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  QRHS range       [1e+00, 3e+00]
+Found heuristic solution: objective 106.0000000
+Presolve removed 1 rows and 1 columns
+Presolve time: 0.00s
+Presolved: 0 rows, 105 columns, 0 nonzeros
+Variable types: 0 continuous, 105 integer (105 binary)
+
+Root relaxation: objective 1.000000e+00, 0 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    3.50000    0    2  106.00000    3.50000  96.7%     -    0s
+     0     0    4.00000    0    3  106.00000    4.00000  96.2%     -    0s
+     0     0    4.00000    0    3  106.00000    4.00000  96.2%     -    0s
+H    0     0                      44.0000000    4.00000  90.9%     -    0s
+H    0     0                       8.0000000    4.00000  50.0%     -    0s
+     0     2    4.00000    0    3    8.00000    4.00000  50.0%     -    0s
+H    9     6                       7.0000000    4.00000  42.9%   2.1    0s
+H  219    97                       6.0000000    4.00000  33.3%   1.2    0s
+   692   417    5.00000   81  299    6.00000    5.00000  16.7%   4.7    5s
+   710   431    5.00000   26  173    6.00000    5.00000  16.7%  39.1   10s
+   727   443    5.00000   12    3    6.00000    5.00000  16.7%  66.2   15s
+
+Explored 733 nodes (51919 simplex iterations) in 15.70 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 5: 6 7 8 ... 106
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.000000000000e+00, best bound 6.000000000000e+00, gap 0.0000%
+Warning: Q constraint 0 doesn't have a name

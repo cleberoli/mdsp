@@ -1,0 +1,68 @@
+
+Gurobi 8.1.1 (win64) logging started 11/26/19 09:56:42
+
+Changed value of parameter LogFile to logs/miss/qp/miss-05-30-2.log
+   Prev: gurobi.log  Default: 
+Changed value of parameter LogToConsole to 0
+   Prev: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter TimeLimit to 3600.0
+   Prev: 1e+100  Min: 0.0  Max: 1e+100  Default: 1e+100
+Optimize a model with 1 rows, 146 columns and 1 nonzeros
+Model has 5 quadratic constraints
+Variable types: 0 continuous, 146 integer (146 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  QMatrix range    [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+  QRHS range       [1e+00, 1e+00]
+Found heuristic solution: objective 146.0000000
+Presolve removed 1 rows and 1 columns
+Presolve time: 0.00s
+Presolved: 0 rows, 145 columns, 0 nonzeros
+Variable types: 0 continuous, 145 integer (145 binary)
+
+Root relaxation: objective 1.000000e+00, 0 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    2.00000    0    2  146.00000    2.00000  98.6%     -    0s
+H    0     0                       6.0000000    2.00000  66.7%     -    0s
+H    0     0                       5.0000000    2.00000  60.0%     -    0s
+     0     0    2.00000    0    2    5.00000    2.00000  60.0%     -    0s
+     0     0    2.00000    0    2    5.00000    2.00000  60.0%     -    0s
+     0     2    2.00000    0    2    5.00000    2.00000  60.0%     -    0s
+  1325   729    4.00000   68  711    5.00000    3.00000  40.0%   1.4    5s
+  1333   736    4.00000   32  556    5.00000    3.00000  40.0%   2.6   10s
+  1342   742    4.00000   25  483    5.00000    3.00000  40.0%   2.6   15s
+  1349   747    4.00000   57  515    5.00000    3.00000  40.0%   2.6   20s
+  1354   753    3.00000   26  456    5.00000    3.00000  40.0%   7.1   25s
+  1364   756    3.00000   29  410    5.00000    3.00000  40.0%  12.5   31s
+  1391   754    3.00000   34  398    5.00000    3.00000  40.0%  20.5   35s
+  1425   750    3.00000   39  330    5.00000    3.00000  40.0%  28.0   40s
+  1527   727    3.00000   50  293    5.00000    3.00000  40.0%  36.6   45s
+  1620   711    3.02299   61  318    5.00000    3.02299  39.5%  44.0   50s
+  1704   723    3.10830   81  243    5.00000    3.10830  37.8%  50.4   55s
+  1828   696    3.67805   37  450    5.00000    3.61552  27.7%  51.6   60s
+  1894   700    3.67542   30  521    5.00000    3.64016  27.2%  53.8   65s
+  1976   709    3.94055   55  334    5.00000    3.65984  26.8%  56.7   70s
+  2078   690    3.71649   38  470    5.00000    3.67555  26.5%  58.8   75s
+  2151   645     cutoff   38         5.00000    3.69749  26.1%  60.9   80s
+  2260   603    3.88274   59  366    5.00000    3.74798  25.0%  63.5   86s
+  2438   465     cutoff   67         5.00000    3.82827  23.4%  63.0   90s
+
+Cutting planes:
+  Gomory: 4
+  Flow cover: 1
+  Zero half: 35
+
+Explored 2600 nodes (161562 simplex iterations) in 93.04 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 3: 5 6 146 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.000000000000e+00, best bound 5.000000000000e+00, gap 0.0000%
+Warning: Q constraint 0 doesn't have a name
